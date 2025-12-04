@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sofia para Vocé</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Lato', sans-serif;
+            background-color: #f8fafc;
+        }
+        h1, h2, h3, h4, .font-serif {
+            font-family: 'Playfair Display', serif;
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.90);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.07);
+        }
+        .hero-bg {
+            background-image: url('https://images.unsplash.com/photo-1543431105-09d57a4a9042?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+        }
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Custom scrollbar hide */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 min-h-screen pb-24 relative selection:bg-rose-200 selection:text-rose-900">
+
+    <!-- Hero Section -->
+    <header class="relative h-[35vh] overflow-hidden rounded-b-[2.5rem] shadow-2xl hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-t from-slate-900 via-slate-900/40 to-transparent"></div>
+        
+        <div class="absolute bottom-0 left-0 w-full p-8 text-center text-white">
+            <div class="inline-flex items-center space-x-2 bg-white/10 backdrop-blur-md border border-white/20 px-3 py-1 rounded-full text-xs mb-4">
+                <i data-lucide="heart" class="w-3 h-3 text-rose-300 fill-rose-300"></i>
+                <span class="tracking-wide">Roteiro Especial</span>
+            </div>
+            <!-- Title Updated -->
+            <h1 class="text-4xl font-serif font-bold mb-2 leading-tight drop-shadow-lg">Sofia para Vocé</h1>
+            <p class="text-rose-100 text-sm font-light tracking-wider opacity-90">Um fim de semana de magia e descanso</p>
+        </div>
+    </header>
+
+    <!-- Navigation Tabs -->
+    <div class="sticky top-4 z-50 px-4 mt-[-20px]">
+        <nav class="flex p-1.5 bg-white/90 backdrop-blur-md rounded-2xl shadow-lg border border-white/50 ring-1 ring-slate-900/5">
+            <button onclick="switchTab('sabado')" id="tab-sabado" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all duration-300 shadow-md bg-gradient-to-br from-rose-50 to-white text-rose-900">
+                Sábado
+            </button>
+            <button onclick="switchTab('domingo')" id="tab-domingo" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all duration-300 text-slate-500 hover:text-slate-700">
+                Domingo
+            </button>
+            <button onclick="switchTab('dicas')" id="tab-dicas" class="flex-1 py-3 rounded-xl text-sm font-bold transition-all duration-300 text-slate-500 hover:text-slate-700">
+                Dicas ✨
+            </button>
+        </nav>
+    </div>
+
+    <!-- Content Container -->
+    <main class="px-5 mt-8 max-w-md mx-auto space-y-8 pb-10">
+
+        <!-- SABADO CONTENT -->
+        <section id="content-sabado" class="fade-in space-y-8">
+            
+            <div class="text-center space-y-2">
+                <h2 class="text-2xl font-serif text-slate-800">Cidade e Natal</h2>
+                <div class="h-1 w-12 bg-rose-300 mx-auto rounded-full"></div>
+                <p class="text-slate-500 text-sm italic">Um dia tranquilo para absorver a magia</p>
+            </div>
+
+            <div class="relative border-l-2 border-rose-100 ml-3 space-y-8 pl-8 pb-4">
+                
+                <!-- Morning -->
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-rose-100 ring-4 ring-white">
+                        <span class="h-2.5 w-2.5 rounded-full bg-rose-400"></span>
+                    </span>
+                    
+                    <div class="glass-card rounded-2xl p-5 hover:border-rose-200 transition-colors duration-300">
+                        <div class="flex justify-between items-start mb-3">
+                            <span class="bg-rose-50 text-rose-700 px-3 py-1 rounded-full text-xs font-bold tracking-wide">10:00 - 13:00</span>
+                            <i data-lucide="coffee" class="text-rose-300 w-5 h-5"></i>
+                        </div>
+                        <h3 class="text-lg font-bold text-slate-800 mb-2">Passeio Relax & Café</h3>
+                        <p class="text-slate-600 text-sm leading-relaxed mb-4">
+                            Caminhada leve pelos ícones da cidade. Sem pressa, apenas apreciando a arquitetura e parando para cafés.
+                        </p>
+                        <div class="space-y-2 mb-4">
+                            <div class="flex items-center text-xs text-slate-500">
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-2 text-rose-400"></i>Catedral Alexander Nevski
+                            </div>
+                            <div class="flex items-center text-xs text-slate-500">
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-2 text-rose-400"></i>Igreja Santa Sofia
+                            </div>
+                            <div class="flex items-center text-xs text-slate-500">
+                                <i data-lucide="map-pin" class="w-3 h-3 mr-2 text-rose-400"></i>Teatro Nacional Ivan Vazov
+                            </div>
+                            <div class="flex items-center text-xs text-slate-500">
+                                <i data-lucide="shopping-bag" class="w-3 h-3 mr-2 text-rose-400"></i>Boulevard Vitosha
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                            <i data-lucide="wallet" class="w-4 h-4 text-slate-400"></i>
+                            <span class="text-xs text-slate-500"><strong>Gasto est:</strong> 10-20 BGN (Café/Snacks)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Afternoon: Christmas Markets -->
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-rose-100 ring-4 ring-white">
+                        <span class="h-2.5 w-2.5 rounded-full bg-rose-500"></span>
+                    </span>
+
+                    <div class="glass-card rounded-2xl overflow-hidden shadow-sm">
+                        <div class="h-32 bg-cover bg-center relative" style="background-image: url('https://images.unsplash.com/photo-1512389142860-9c449e58a543?auto=format&fit=crop&q=80&w=1000');">
+                            <div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+                                <h3 class="text-white font-serif text-xl font-bold tracking-wide">Mercados de Natal</h3>
+                            </div>
+                        </div>
+                        <div class="p-5">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="bg-rose-50 text-rose-700 px-3 py-1 rounded-full text-xs font-bold">15:30 - 18:30</span>
+                                <i data-lucide="gift" class="text-rose-400 w-5 h-5"></i>
+                            </div>
+
+                            <div class="space-y-4">
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                                    <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2">
+                                        <span class="text-lg">🇩🇪</span> Deutscher Weihnachtsmarkt
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1 pl-7">No City Garden. O clássico, aconchegante e imperdível.</p>
+                                </div>
+                                
+                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
+                                    <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2">
+                                        <span class="text-lg">🎄</span> Sofia Christmas Fest
+                                    </h4>
+                                    <p class="text-xs text-slate-500 mt-1 pl-7">Frente ao NDK. Mais espaçoso e iluminado.</p>
+                                </div>
+                            </div>
+
+                            <!-- IMPORTANT LINK -->
+                            <div class="mt-5 pt-4 border-t border-slate-100">
+                                <p class="text-xs text-center text-slate-400 mb-3">Para ver a localização exata e detalhes:</p>
+                                <a href="https://www.first.bg/en/blog/article/160-guide-to-christmas-markets-in-sofia" target="_blank" class="flex items-center justify-center w-full py-3 rounded-xl bg-rose-500 text-white text-xs font-bold shadow-lg shadow-rose-200 hover:bg-rose-600 transition-all transform hover:-translate-y-0.5">
+                                    <i data-lucide="map" class="w-4 h-4 mr-2"></i>
+                                    Abrir Guia de Mercados
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Night -->
+                <div class="relative group">
+                    <span class="absolute -left-[41px] top-0 flex h-6 w-6 items-center justify-center rounded-full bg-slate-200 ring-4 ring-white">
+                        <span class="h-2.5 w-2.5 rounded-full bg-slate-600"></span>
+                    </span>
+                    <div class="glass-card rounded-2xl p-5 bg-gradient-to-br from-slate-800 to-slate-900 text-white border-none shadow-xl">
+                        <div class="flex items-center gap-3 mb-2">
+                            <div class="p-1.5 bg-white/10 rounded-lg">
+                                <i data-lucide="moon" class="text-amber-300 w-4 h-4"></i>
+                            </div>
+                            <h3 class="font-serif text-lg">Noite Relaxante</h3>
+                        </div>
+                        <p class="text-slate-300 text-sm font-light">Jantar leve perto do hotel e descanso cedo. Amanhã é dia de aventura.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- DOMINGO CONTENT -->
+        <section id="content-domingo" class="hidden fade-in space-y-6">
+            
+            <div class="text-center space-y-2 mb-6">
+                <h2 class="text-2xl font-serif text-slate-800">Natureza Búlgara</h2>
+                <div class="h-1 w-12 bg-indigo-300 mx-auto rounded-full"></div>
+                <p class="text-slate-500 text-sm italic">Escolha a sua aventura</p>
+            </div>
+
+            <!-- Option Toggle -->
+            <div class="grid grid-cols-2 gap-4 mb-6">
+                <button onclick="toggleSundayOption('vitosha')" id="btn-vitosha" class="relative overflow-hidden p-4 rounded-2xl border-2 border-rose-400 bg-rose-50 text-rose-800 flex flex-col items-center gap-2 transition-all shadow-md group">
+                    <div class="absolute inset-0 bg-white/50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <i data-lucide="mountain-snow" class="w-6 h-6 z-10"></i>
+                    <span class="text-xs font-bold z-10">Montanha Vitosha</span>
+                </button>
+                <button onclick="toggleSundayOption('cuevas')" id="btn-cuevas" class="relative overflow-hidden p-4 rounded-2xl border border-slate-200 bg-white text-slate-500 flex flex-col items-center gap-2 transition-all hover:border-indigo-200 group">
+                    <div class="absolute inset-0 bg-indigo-50 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <i data-lucide="gem" class="w-6 h-6 z-10"></i>
+                    <span class="text-xs font-bold z-10">3 Cavernas</span>
+                </button>
+            </div>
+
+            <!-- Content Area for Options -->
+            <div class="min-h-[400px]">
+                
+                <!-- Option 1: Vitosha -->
+                <div id="detail-vitosha" class="fade-in">
+                    <div class="glass-card rounded-2xl overflow-hidden mb-6 group">
+                        <div class="relative overflow-hidden">
+                             <!-- Updated Image Vitosha -->
+                             <img src="https://bulgariawalking.com/wp-content/uploads/2016/10/vitosha-self-guided-13.jpg" class="h-44 w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                             <div class="absolute top-3 right-3 bg-green-500/90 backdrop-blur text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                 Opção Relax & Econômica
+                             </div>
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold mb-2 text-slate-800">Montanha Vitosha</h3>
+                            <p class="text-slate-600 text-sm mb-5 leading-relaxed">
+                                Caminhada tranquila na neve ou com raquetes. Vista panorâmica de Sófia lá do alto, sem ir muito longe.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-3 mb-6">
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <div class="flex items-center text-slate-400 mb-1"><i data-lucide="clock" class="w-3 h-3 mr-1"></i> <span class="text-[10px] uppercase font-bold">Horário</span></div>
+                                    <div class="text-sm font-bold text-slate-700">09:00 - 15:00</div>
+                                </div>
+                                <div class="bg-slate-50 p-3 rounded-xl border border-slate-100">
+                                    <div class="flex items-center text-slate-400 mb-1"><i data-lucide="wallet" class="w-3 h-3 mr-1"></i> <span class="text-[10px] uppercase font-bold">Preço</span></div>
+                                    <div class="text-sm font-bold text-slate-700">~40-70 EUR</div>
+                                </div>
+                            </div>
+
+                            <div class="bg-rose-50/50 p-4 rounded-xl mb-6 border border-rose-100">
+                                <h4 class="font-bold text-xs text-rose-400 uppercase mb-2 flex items-center"><i data-lucide="check-circle-2" class="w-3 h-3 mr-1"></i> Plano Sugerido</h4>
+                                <ul class="text-sm space-y-2 text-slate-600">
+                                    <li>🌄 Subida zona Aleko ou cascada Boyana</li>
+                                    <li>☕ Chocolate quente com vista</li>
+                                    <li>🏙️ 16:00 Tarde livre em Sófia</li>
+                                </ul>
+                            </div>
+
+                            <a href="https://exploriatour.com/itinerary/vitosha-mountain-half-day-hiking-tour-from-sofia/" target="_blank" class="block w-full bg-slate-800 text-white text-center py-3.5 rounded-xl font-bold text-sm hover:bg-slate-700 transition shadow-lg hover:shadow-xl transform active:scale-95">
+                                Ver Detalhes do Tour
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Option 2: Cuevas -->
+                <div id="detail-cuevas" class="hidden fade-in">
+                    <div class="glass-card rounded-2xl overflow-hidden mb-6 border-indigo-200 border-2 shadow-indigo-100 group">
+                        <div class="relative overflow-hidden h-44">
+                             <!-- Updated Image Cuevas -->
+                             <img src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-674x446/06/75/92/61.jpg" class="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105">
+                             <div class="absolute top-3 right-3 bg-indigo-600 text-white text-[10px] font-bold px-3 py-1 rounded-full shadow-lg">
+                                 Recomendado ⭐
+                             </div>
+                             <div class="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/60 to-transparent p-4">
+                                 <span class="text-white text-xs font-bold flex items-center"><i data-lucide="camera" class="w-3 h-3 mr-1"></i> Visual Incrível</span>
+                             </div>
+                        </div>
+                       
+                        <div class="p-6">
+                            <h3 class="text-xl font-serif font-bold mb-2 text-slate-800">Tour 3 Cavernas</h3>
+                            <p class="text-slate-600 text-sm mb-5 leading-relaxed">
+                                Saeva Dupka + Devetashka + Prohodna ("Olhos de Deus"). Uma experiência única e impactante.
+                            </p>
+                            
+                            <div class="grid grid-cols-2 gap-3 mb-6">
+                                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                                    <div class="flex items-center text-indigo-400 mb-1"><i data-lucide="clock" class="w-3 h-3 mr-1"></i> <span class="text-[10px] uppercase font-bold">Duração</span></div>
+                                    <div class="text-sm font-bold text-indigo-900">10 horas</div>
+                                </div>
+                                <div class="bg-indigo-50 p-3 rounded-xl border border-indigo-100">
+                                    <div class="flex items-center text-indigo-400 mb-1"><i data-lucide="wallet" class="w-3 h-3 mr-1"></i> <span class="text-[10px] uppercase font-bold">Preço</span></div>
+                                    <div class="text-sm font-bold text-indigo-900">~120-150 USD</div>
+                                </div>
+                            </div>
+
+                            <a href="https://happytovisit.com/sofia-saeva-dupka-devetashka-and-prohodna-cave-day-tour/" target="_blank" class="block w-full bg-indigo-600 text-white text-center py-3.5 rounded-xl font-bold text-sm hover:bg-indigo-700 transition shadow-lg shadow-indigo-200 transform active:scale-95">
+                                Reservar Aventura
+                            </a>
+                            <p class="text-center text-[10px] text-slate-400 mt-3">Inclui transporte e entradas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer for Sunday -->
+            <div class="text-center py-2 px-4 bg-slate-100/50 rounded-2xl">
+                <p class="text-slate-500 text-xs mb-1">Se sobrar energia à noite?</p>
+                <p class="text-rose-500 font-serif font-bold text-sm">Último passeio para ver as luzes ✨</p>
+            </div>
+        </section>
+
+        <!-- DICAS CONTENT -->
+        <section id="content-dicas" class="hidden fade-in space-y-6">
+            <div class="text-center space-y-2 mb-6">
+                <h2 class="text-2xl font-serif text-slate-800">Para ser Perfeito</h2>
+                <div class="h-1 w-12 bg-amber-300 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid grid-cols-1 gap-4">
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
+                    <div class="bg-blue-50 p-3 rounded-xl text-blue-600 shadow-sm border border-blue-100">
+                        <i data-lucide="thermometer-snowflake" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-700 mb-1">O Frio</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed">Sófia é gelada nessa época. Roupa térmica, luvas boas e gorro são seus melhores amigos.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
+                    <div class="bg-amber-50 p-3 rounded-xl text-amber-600 shadow-sm border border-amber-100">
+                        <i data-lucide="footprints" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-700 mb-1">Calçados</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed">Botas confortáveis e impermeáveis são essenciais, principalmente para os passeios na neve.</p>
+                    </div>
+                </div>
+
+                <div class="glass-card p-5 rounded-2xl flex items-start gap-4 hover:shadow-md transition-shadow">
+                    <div class="bg-rose-50 p-3 rounded-xl text-rose-600 shadow-sm border border-rose-100">
+                        <i data-lucide="coins" class="w-6 h-6"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-slate-700 mb-1">Moeda (Leva)</h3>
+                        <p class="text-sm text-slate-500 leading-relaxed">Tenha dinheiro em espécie (Leva Búlgaro - BGN) para as barraquinhas menores dos mercados.</p>
+                    </div>
+                </div>
+            </div>
+            
+             <div class="mt-8 p-6 bg-white rounded-2xl shadow-lg border border-slate-100 text-center relative overflow-hidden">
+                <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-rose-300 to-indigo-300"></div>
+                <h3 class="font-serif text-lg mb-2 text-slate-800">Nota Pessoal</h3>
+                <textarea class="w-full bg-slate-50 p-4 rounded-xl text-sm text-slate-600 border border-slate-200 focus:ring-2 focus:ring-rose-200 focus:border-rose-300 outline-none transition-all resize-none" rows="3">Disfruta mucho Negrita Rica!</textarea>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Floating Action Button for Editing Note -->
+    <div class="fixed bottom-6 right-6 z-40">
+        <button onclick="document.querySelector('textarea').focus()" class="bg-slate-800 text-white p-4 rounded-full shadow-2xl hover:bg-slate-700 transition transform hover:scale-110 active:scale-95 group border-2 border-white/20">
+            <i data-lucide="pen-tool" class="w-6 h-6 group-hover:rotate-12 transition-transform"></i>
+        </button>
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        function switchTab(tabName) {
+            // Hide all content
+            const contents = ['sabado', 'domingo', 'dicas'];
+            contents.forEach(c => {
+                const el = document.getElementById(`content-${c}`);
+                el.classList.add('hidden');
+                el.classList.remove('fade-in'); // Reset animation
+            });
+
+            // Reset tab styles
+            contents.forEach(t => {
+                const btn = document.getElementById(`tab-${t}`);
+                btn.classList.remove('bg-gradient-to-br', 'from-rose-50', 'to-white', 'text-rose-900', 'shadow-md');
+                btn.classList.add('text-slate-500');
+            });
+
+            // Show selected content with animation
+            const activeContent = document.getElementById(`content-${tabName}`);
+            activeContent.classList.remove('hidden');
+            // Trigger reflow to restart animation
+            void activeContent.offsetWidth; 
+            activeContent.classList.add('fade-in');
+
+            // Style selected tab
+            const activeBtn = document.getElementById(`tab-${tabName}`);
+            activeBtn.classList.add('bg-gradient-to-br', 'from-rose-50', 'to-white', 'text-rose-900', 'shadow-md');
+            activeBtn.classList.remove('text-slate-500');
+            
+            lucide.createIcons();
+            
+            // Scroll to top of content gently if needed
+            if (window.scrollY > 200) {
+                window.scrollTo({top: 150, behavior: 'smooth'});
+            }
+        }
+
+        function toggleSundayOption(option) {
+            const vitoshaBtn = document.getElementById('btn-vitosha');
+            const cuevasBtn = document.getElementById('btn-cuevas');
+            const vitoshaDetail = document.getElementById('detail-vitosha');
+            const cuevasDetail = document.getElementById('detail-cuevas');
+
+            if (option === 'vitosha') {
+                vitoshaBtn.classList.add('border-rose-400', 'bg-rose-50', 'text-rose-800', 'shadow-md');
+                vitoshaBtn.classList.remove('border-slate-200', 'bg-white', 'text-slate-500');
+                
+                cuevasBtn.classList.remove('border-rose-400', 'bg-rose-50', 'text-rose-800', 'shadow-md');
+                cuevasBtn.classList.add('border-slate-200', 'bg-white', 'text-slate-500');
+
+                vitoshaDetail.classList.remove('hidden');
+                vitoshaDetail.classList.add('fade-in');
+                cuevasDetail.classList.add('hidden');
+            } else {
+                cuevasBtn.classList.add('border-rose-400', 'bg-rose-50', 'text-rose-800', 'shadow-md'); // Using same active style as Vitosha for consistency
+                cuevasBtn.classList.remove('border-slate-200', 'bg-white', 'text-slate-500');
+                
+                vitoshaBtn.classList.remove('border-rose-400', 'bg-rose-50', 'text-rose-800', 'shadow-md');
+                vitoshaBtn.classList.add('border-slate-200', 'bg-white', 'text-slate-500');
+
+                cuevasDetail.classList.remove('hidden');
+                cuevasDetail.classList.add('fade-in');
+                vitoshaDetail.classList.add('hidden');
+            }
+            lucide.createIcons();
+        }
+    </script>
+</body>
+</html>
