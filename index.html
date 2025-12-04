@@ -107,22 +107,33 @@
                         </div>
                         <h3 class="text-lg font-bold text-slate-800 mb-2">Passeio Relax & Café</h3>
                         <p class="text-slate-600 text-sm leading-relaxed mb-4">
-                            Caminhada leve pelos ícones da cidade. Sem pressa, apenas apreciando a arquitetura e parando para cafés.
+                            Caminhada leve pelos ícones da cidade. Toque nos locais para ver no mapa.
                         </p>
-                        <div class="space-y-2 mb-4">
-                            <div class="flex items-center text-xs text-slate-500">
-                                <i data-lucide="map-pin" class="w-3 h-3 mr-2 text-rose-400"></i>Catedral Alexander Nevski
-                            </div>
-                            <div class="flex items-center text-xs text-slate-500">
-                                <i data-lucide="map-pin" class="w-3 h-3 mr-2 text-rose-400"></i>Igreja Santa Sofia
-                            </div>
-                            <div class="flex items-center text-xs text-slate-500">
-                                <i data-lucide="map-pin" class="w-3 h-3 mr-2 text-rose-400"></i>Teatro Nacional Ivan Vazov
-                            </div>
-                            <div class="flex items-center text-xs text-slate-500">
-                                <i data-lucide="shopping-bag" class="w-3 h-3 mr-2 text-rose-400"></i>Boulevard Vitosha
-                            </div>
+                        
+                        <!-- Map Links Added -->
+                        <div class="space-y-3 mb-4">
+                            <a href="https://www.google.com/maps/search/?api=1&query=Catedral+Alexander+Nevski+Sofia" target="_blank" class="flex items-center text-xs text-slate-500 hover:text-rose-600 transition-colors group/link p-1.5 -ml-1.5 rounded-lg hover:bg-rose-50">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-2 text-rose-400 group-hover/link:text-rose-600 transition-colors"></i>
+                                <span class="underline decoration-dotted decoration-slate-300 underline-offset-2 group-hover/link:decoration-rose-300">Catedral Alexander Nevski</span>
+                                <i data-lucide="external-link" class="w-3 h-3 ml-auto opacity-0 group-hover/link:opacity-100 transition-opacity text-rose-400"></i>
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Igreja+de+Santa+Sofia+Sofia" target="_blank" class="flex items-center text-xs text-slate-500 hover:text-rose-600 transition-colors group/link p-1.5 -ml-1.5 rounded-lg hover:bg-rose-50">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-2 text-rose-400 group-hover/link:text-rose-600 transition-colors"></i>
+                                <span class="underline decoration-dotted decoration-slate-300 underline-offset-2 group-hover/link:decoration-rose-300">Igreja Santa Sofia</span>
+                                <i data-lucide="external-link" class="w-3 h-3 ml-auto opacity-0 group-hover/link:opacity-100 transition-opacity text-rose-400"></i>
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Teatro+Nacional+Ivan+Vazov" target="_blank" class="flex items-center text-xs text-slate-500 hover:text-rose-600 transition-colors group/link p-1.5 -ml-1.5 rounded-lg hover:bg-rose-50">
+                                <i data-lucide="map-pin" class="w-3.5 h-3.5 mr-2 text-rose-400 group-hover/link:text-rose-600 transition-colors"></i>
+                                <span class="underline decoration-dotted decoration-slate-300 underline-offset-2 group-hover/link:decoration-rose-300">Teatro Nacional Ivan Vazov</span>
+                                <i data-lucide="external-link" class="w-3 h-3 ml-auto opacity-0 group-hover/link:opacity-100 transition-opacity text-rose-400"></i>
+                            </a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=Vitosha+Boulevard+Sofia" target="_blank" class="flex items-center text-xs text-slate-500 hover:text-rose-600 transition-colors group/link p-1.5 -ml-1.5 rounded-lg hover:bg-rose-50">
+                                <i data-lucide="shopping-bag" class="w-3.5 h-3.5 mr-2 text-rose-400 group-hover/link:text-rose-600 transition-colors"></i>
+                                <span class="underline decoration-dotted decoration-slate-300 underline-offset-2 group-hover/link:decoration-rose-300">Boulevard Vitosha</span>
+                                <i data-lucide="external-link" class="w-3 h-3 ml-auto opacity-0 group-hover/link:opacity-100 transition-opacity text-rose-400"></i>
+                            </a>
                         </div>
+
                         <div class="flex items-center gap-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
                             <i data-lucide="wallet" class="w-4 h-4 text-slate-400"></i>
                             <span class="text-xs text-slate-500"><strong>Gasto est:</strong> 10-20 BGN (Café/Snacks)</span>
@@ -148,20 +159,26 @@
                                 <i data-lucide="gift" class="text-rose-400 w-5 h-5"></i>
                             </div>
 
+                            <p class="text-[10px] text-slate-400 uppercase tracking-widest font-bold mb-2">Toque para ver o local:</p>
+
                             <div class="space-y-4">
-                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                                    <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2">
+                                <!-- Map Link 1 -->
+                                <a href="https://www.google.com/maps/search/?api=1&query=City+Garden+Sofia" target="_blank" class="block bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-rose-300 hover:shadow-md transition-all group/market">
+                                    <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2 group-hover/market:text-rose-600 transition-colors">
                                         <span class="text-lg">🇩🇪</span> Deutscher Weihnachtsmarkt
+                                        <i data-lucide="map-pin" class="w-3 h-3 ml-auto text-slate-300 group-hover/market:text-rose-400"></i>
                                     </h4>
                                     <p class="text-xs text-slate-500 mt-1 pl-7">No City Garden. O clássico, aconchegante e imperdível.</p>
-                                </div>
+                                </a>
                                 
-                                <div class="bg-white p-3 rounded-xl border border-slate-100 shadow-sm">
-                                    <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2">
+                                <!-- Map Link 2 -->
+                                <a href="https://www.google.com/maps/search/?api=1&query=National+Palace+of+Culture+Sofia" target="_blank" class="block bg-white p-3 rounded-xl border border-slate-100 shadow-sm hover:border-rose-300 hover:shadow-md transition-all group/market">
+                                    <h4 class="font-bold text-slate-700 text-sm flex items-center gap-2 group-hover/market:text-rose-600 transition-colors">
                                         <span class="text-lg">🎄</span> Sofia Christmas Fest
+                                        <i data-lucide="map-pin" class="w-3 h-3 ml-auto text-slate-300 group-hover/market:text-rose-400"></i>
                                     </h4>
                                     <p class="text-xs text-slate-500 mt-1 pl-7">Frente ao NDK. Mais espaçoso e iluminado.</p>
-                                </div>
+                                </a>
                             </div>
 
                             <!-- IMPORTANT LINK -->
